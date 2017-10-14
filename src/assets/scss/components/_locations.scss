@@ -1,0 +1,41 @@
+//----------------------------------------------
+// Locations
+//---------------------------------------------- 
+.locations {
+
+  &__container {
+    @include flex-grid(1, 2, 3, $pad: 1em);
+  }
+
+  &__link {
+    position: relative;
+
+    display: block;
+
+    color: $color-white;
+  }
+
+  &__img {
+    position: relative;
+
+    padding-bottom: 100%;
+  }
+
+  &__overlay {
+    @extend %flex-center;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $z-9;
+
+    height: 100%;
+    width: 100%;
+
+    padding: 2em;
+  }
+
+  &__title {
+
+  }
+}

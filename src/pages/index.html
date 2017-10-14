@@ -1,0 +1,114 @@
+@@include("./partials/_head.html", {
+  "title": "Scenes Around Seattle",
+  "description": "Scenes around Seattle."
+})
+
+@@include('./partials/_header.html')
+
+<!-- Main -->
+<main role="main">
+
+<!-- Mast -->
+<section class="mast section-padding">
+  <div class="grid-xlarge">
+    <h1 class="mast__title">Visit Seattle from your couch.</h1>
+    <hr class="mast__sep"/>
+    <p class="mast__text">Experience Seattle in 360°. Grab a pair of virtual reality goggles to be immersed in the great Pacific Northwear or choose to browse locations on your desktop.</p>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about section-padding">
+  <div class="grid-xlarge">
+    <h2>About the project</h2>
+    <div class="about__text">
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+</section>
+
+<!-- Locations -->
+<section class="locations section-padding">
+  <div class="grid-xlarge">
+    <h2>I want to visit...</h2>
+    <div class="locations__container">
+      @@loop('./partials/_location.html', [
+        {
+          "link": "http://melslearninglab.com",
+          "image": "https://source.unsplash.com/TD4DBagg2wE/1600x900",
+          "title": "Pike Place Market"
+        },  
+        {
+          "link": "http://melslearninglab.com",
+          "image": "https://source.unsplash.com/TD4DBagg2wE/1600x900",
+          "title": "Starbucks Reserve Roastery"
+        },
+        {
+          "link": "http://melslearninglab.com",
+          "image": "https://source.unsplash.com/TD4DBagg2wE/1600x900",
+          "title": "The Waterfront"
+        },
+        {
+          "link": "http://melslearninglab.com",
+          "image": "https://source.unsplash.com/TD4DBagg2wE/1600x900",
+          "title": "The Gum Wall"
+        },
+        {
+          "link": "http://melslearninglab.com",
+          "image": "https://source.unsplash.com/TD4DBagg2wE/1600x900",
+          "title": "The Space Needle"
+        },
+        {
+          "link": "http://melslearninglab.com",
+          "image": "https://source.unsplash.com/TD4DBagg2wE/1600x900",
+          "title": "Discovery Park"
+        }
+      ])
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="contact section-padding">
+  <div class="grid-xlarge">
+    <h2>Get in touch</h2>
+
+    <form id="form" action="https://formspree.io/mmilloway87@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Email from Scenes Around Seattle. 🦀">
+      <div class="form__subcontainer">
+        <div class="form__active">
+          <label for="form-first-name">First Name</label>
+          <input type="text" name="first-name" id="form-first-name" required>
+        </div>
+        <div class="form__active">
+          <label for="form-last-name">Last Name</label>
+          <input type="text" name="last-name" id="form-last-name" required>
+        </div>
+      </div>
+
+      <div class="form__subcontainer">
+        <div class="form__active">
+          <label for="form-email">E-Mail</label>
+          <input type="email" name="email" id="form-email" required>
+        </div>
+      </div>
+
+      <div class="form__active">
+        <label for="form-message">Message</label>
+        <textarea name="message" id="form-message" rows="2"></textarea>
+      </div>
+
+      <div class="form__submit">
+        <div class="form__btn">
+          <input type="submit" value="Send">
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->  
+@@include('./partials/_footer.html')
