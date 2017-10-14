@@ -1,44 +1,64 @@
 //----------------------------------------------
-// Forms
-//---------------------------------------------- 
+// Form
+//----------------------------------------------
 form {
-  display: flex;
-  justify-content: center;
   width: 100%;
 }
 
 //----------------------------------------------
 // Inputs
-//---------------------------------------------- 
-input {
+//----------------------------------------------
+input, textarea {
   display: block;
   width: 100%;
-  max-width: 100%;
-  padding: 0.75em 0.5em;
+  margin-bottom: 2em;
+  padding: 0.5em 0.25em 0.25em;
 
   font-family: $font-body;
-  font-size: $font-small;
   font-weight: 400;
+  font-size: 1em;
   color: $color-black;
   background: transparent;
-  border: 1px solid $color-black;
+  border: none;
+  border-bottom: 1px solid $color-black;
   border-radius: 0;
   box-shadow: none;
   outline: 0;
-  -webkit-appearance: none;
+  transition: border-color 200ms ease-in-out;
+
+  &:focus {
+    border-color: $color-alpha;
+  }
+}
+
+input[type="submit"] {
+  position: relative;
+  z-index: $z-1;
+
+  padding: 0.75em;
+  margin-bottom: 0;
+
+  font-weight: 400;
+  font-size: 1.1em;
+  color: $color-black;
+  border-bottom: none;
+  cursor: pointer;
 }
 
 //----------------------------------------------
-// Misc
-//---------------------------------------------- 
-.form-group {
-  width: 45%;
-  margin-right: 0.5em;
+// Labels
+//----------------------------------------------
+label {
+  display: block;
+  margin-bottom: 0.5em;
+
+  font-family: $font-header;
+  font-size: 1.25em;
 }
 
 //----------------------------------------------
 // Placeholders
-//---------------------------------------------- 
+//----------------------------------------------
 ::placeholder {
   color: $color-grey;
 }

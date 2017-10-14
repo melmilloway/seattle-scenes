@@ -3,4 +3,27 @@
 //---------------------------------------------- 
 .contact {
 
+  &__form {
+    margin-top: 2em;
+  }
+
+  &__subcontainer {
+    display: flex;
+    justify-content: space-between;
+
+    & > * {
+      flex-basis: 47.5%;
+      max-width: 47.5%;
+    }
+  }
+
+  &__submit {
+    text-align: right;
+  }
+
+  &__btn {
+    @include btn-split($color-black);
+
+    display: inline-block;
+  }
 }

@@ -75,7 +75,7 @@
 
 <!-- Mast -->
 <section class="mast section-padding">
-  <div class="grid-xlarge">
+  <div class="grid-large">
     <h1>Visit Seattle from your couch.</h1>
     <hr class="mast__sep"/>
     <p class="mast__text">Experience Seattle in 360°. Grab a pair of virtual reality goggles to be immersed in the great Pacific Northwear or choose to browse locations on your desktop.</p>
@@ -91,7 +91,7 @@
 
 <!-- About -->
 <section id="about" class="about section-padding">
-  <div class="grid-xlarge">
+  <div class="grid-large">
     <h2>About the project</h2>
     <div class="about__text">
       <p>Ramps hoodie drinking vinegar hexagon hammock chartreuse, artisan 90's affogato tote bag fixie umami humblebrag. Heirloom hammock post-ironic, enamel pin tattooed four dollar toast mixtape. Chicharrones banjo edison bulb, retro humblebrag pok pok quinoa offal vice +1 lomo marfa sartorial. Distillery tumeric chia cold-pressed. Salvia distillery gastropub, leggings crucifix you probably haven't heard of them disrupt before they sold out quinoa pinterest tattooed ramps.</p>
@@ -102,7 +102,7 @@
 
 <!-- Locations -->
 <section id="travel" class="locations section-padding">
-  <div class="grid-xlarge">
+  <div class="grid-large">
     <h2>I want to visit...</h2>
     <div class="locations__container">
       <article>
@@ -178,36 +178,29 @@
 
 <!-- Contact -->
 <section id="contact" class="contact section-padding">
-  <div class="grid-xlarge">
+  <div class="grid-large">
     <h2>Get in touch</h2>
 
-    <form id="form" action="https://formspree.io/mmilloway87@gmail.com" method="POST">
+    <form id="form" class="contact__form" action="https://formspree.io/mmilloway87@gmail.com" method="POST">
       <input type="hidden" name="_subject" value="Email from Scenes Around Seattle. 🦀">
-      <div class="form__subcontainer">
-        <div class="form__active">
-          <label for="form-first-name">First Name</label>
-          <input type="text" name="first-name" id="form-first-name" required>
+      <div class="contact__subcontainer">
+        <div>
+          <label for="form-name">Name</label>
+          <input type="text" name="name" id="form-name" placeholder="Bob Ross" required>
         </div>
-        <div class="form__active">
-          <label for="form-last-name">Last Name</label>
-          <input type="text" name="last-name" id="form-last-name" required>
-        </div>
-      </div>
-
-      <div class="form__subcontainer">
-        <div class="form__active">
+        <div>
           <label for="form-email">E-Mail</label>
-          <input type="email" name="email" id="form-email" required>
+          <input type="email" name="email" id="form-email" placeholder="TinyLittleTrees@gmail.com" required>
         </div>
       </div>
 
-      <div class="form__active">
+      <div>
         <label for="form-message">Message</label>
-        <textarea name="message" id="form-message" rows="2"></textarea>
+        <textarea name="message" id="form-message" rows="3"></textarea>
       </div>
 
-      <div class="form__submit">
-        <div class="form__btn">
+      <div class="contact__submit">
+        <div class="contact__btn">
           <input type="submit" value="Send">
         </div>
       </div>

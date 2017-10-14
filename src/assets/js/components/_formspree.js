@@ -8,9 +8,9 @@ const Formspree = (() => {
     settings() {
       return {
         body: document.body,
-        ajax: document.getElementsByClassName('ajax')[0],
-        ajaxMessage: document.getElementsByClassName('ajax__message')[0],
-        ajaxClose: document.getElementsByClassName('ajax__close')[0],
+        // ajax: document.getElementsByClassName('ajax')[0],
+        // ajaxMessage: document.getElementsByClassName('ajax__message')[0],
+        // ajaxClose: document.getElementsByClassName('ajax__close')[0],
         input: document.getElementsByTagName('input'),
         textarea: document.getElementsByTagName('textarea'),
         formActive: 'js-form-active',
@@ -26,30 +26,30 @@ const Formspree = (() => {
     },
 
     bindEvents() {
-      this.focus();
+      // this.focus();
       this.ajax();
-      this.ajaxClose();
+      // this.ajaxClose();
     },
 
-    focus() {
-      [].forEach.call(s.input, input => {
-        input.addEventListener('focus', e => {
-          e.target.parentNode.classList.add(s.formActive);
-        });
-        input.addEventListener('blur', e => {
-          e.target.parentNode.classList.remove(s.formActive);
-        });
-      });
+    // focus() {
+    //   [].forEach.call(s.input, input => {
+    //     input.addEventListener('focus', e => {
+    //       e.target.parentNode.classList.add(s.formActive);
+    //     });
+    //     input.addEventListener('blur', e => {
+    //       e.target.parentNode.classList.remove(s.formActive);
+    //     });
+    //   });
 
-      [].forEach.call(s.textarea, textarea => {
-        textarea.addEventListener('focus', e => {
-          e.target.parentNode.classList.add(s.formActive);
-        });
-        textarea.addEventListener('blur', e => {
-          e.target.parentNode.classList.remove(s.formActive);
-        });
-      });
-    },
+    //   [].forEach.call(s.textarea, textarea => {
+    //     textarea.addEventListener('focus', e => {
+    //       e.target.parentNode.classList.add(s.formActive);
+    //     });
+    //     textarea.addEventListener('blur', e => {
+    //       e.target.parentNode.classList.remove(s.formActive);
+    //     });
+    //   });
+    // },
 
     ajax() {
       const form = document.getElementById('form');

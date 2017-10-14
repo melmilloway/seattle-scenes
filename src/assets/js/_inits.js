@@ -3,7 +3,7 @@
 //----------------------------------------------
 import WOW from './vendor/_wow.js';
 import SmoothScroll from 'smooth-scroll';
-// import Formspree from './components/_formspree.js';
+import Formspree from './components/_formspree.js';
 
 //----------------------------------------------
 // Inits
@@ -20,6 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Inits
   wow.init();
-  // Formspree.init();
+  Formspree.init();
 
 });
