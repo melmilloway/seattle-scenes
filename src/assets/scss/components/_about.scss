@@ -4,7 +4,19 @@
 .about {
 
   &__text {
-    column-count: 2;
-    column-gap: 2em;
+    margin-top: 2em;
+
+    @media (min-width: $mq-small) {
+      column-count: 2;
+      column-gap: 2em;
+    }
+
+    @media (min-width: $mq-med) {
+      column-gap: 3em;
+    }
+
+    & > *:last-child {
+      margin-bottom: 0;
+    }
   }
 }

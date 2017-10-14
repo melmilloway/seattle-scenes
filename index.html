@@ -62,9 +62,9 @@
 
   <nav>
     <ul class="header__list">
-      <li><a class="header__link" href="#">About</a></li>
-      <li><a class="header__link" href="#">Travel</a></li>
-      <li><a class="header__link" href="#">Get in touch</a></li>
+      <li><a data-scroll class="header__link" href="#about">About</a></li>
+      <li><a data-scroll class="header__link" href="#travel">Travel</a></li>
+      <li><a data-scroll class="header__link" href="#contact">Get in touch</a></li>
     </ul>
   </nav>
 </header>
@@ -76,35 +76,42 @@
 <!-- Mast -->
 <section class="mast section-padding">
   <div class="grid-xlarge">
-    <h1 class="mast__title">Visit Seattle from your couch.</h1>
+    <h1>Visit Seattle from your couch.</h1>
     <hr class="mast__sep"/>
     <p class="mast__text">Experience Seattle in 360°. Grab a pair of virtual reality goggles to be immersed in the great Pacific Northwear or choose to browse locations on your desktop.</p>
   </div>
 </section>
 
+<!-- Sep -->
+<section class="section-padding--none">
+  <div class="grid-xlarge">
+    <hr class="sep"/>
+  </div>
+</section>
+
 <!-- About -->
-<section class="about section-padding">
+<section id="about" class="about section-padding">
   <div class="grid-xlarge">
     <h2>About the project</h2>
     <div class="about__text">
-      <p></p>
-      <p></p>
+      <p>Ramps hoodie drinking vinegar hexagon hammock chartreuse, artisan 90's affogato tote bag fixie umami humblebrag. Heirloom hammock post-ironic, enamel pin tattooed four dollar toast mixtape. Chicharrones banjo edison bulb, retro humblebrag pok pok quinoa offal vice +1 lomo marfa sartorial. Distillery tumeric chia cold-pressed. Salvia distillery gastropub, leggings crucifix you probably haven't heard of them disrupt before they sold out quinoa pinterest tattooed ramps.</p>
+      <p>Ramps ethical gentrify 90's, cray messenger bag sriracha you probably haven't heard of them scenester. Hella hammock kogi disrupt. Enamel pin craft beer brunch asymmetrical viral, pop-up distillery fashion axe paleo. Pabst kale chips letterpress flannel, fanny pack taxidermy godard selfies vinyl sartorial woke keytar. Ugh heirloom pinterest offal kitsch knausgaard fashion axe.</p>
     </div>
   </div>
 </section>
 
 <!-- Locations -->
-<section class="locations section-padding">
+<section id="travel" class="locations section-padding">
   <div class="grid-xlarge">
     <h2>I want to visit...</h2>
     <div class="locations__container">
       <article>
   <a class="locations__link" href="http://melslearninglab.com" target="_blank">
     <div class="locations__img bg-grey">
-      <!-- <span class="preloader"><span></span></span> -->
-      <div class="absolute-bg" style="background-image: url('https://source.unsplash.com/TD4DBagg2wE/1600x900');"></div>
+      <span class="preloader"><span></span></span>
+      <div class="absolute-bg js-wow fade-in" data-wow-offset="150" style="background-image: url('https://source.unsplash.com/kdcnmw3x5GY/1600x900');"></div>
     </div>
-    <div class="locations__overlay">
+    <div class="locations__overlay js-wow fade-in" data-wow-offset="200">
       <h3 class="locations__title">Pike Place Market</h3>
     </div>
   </a>
@@ -112,10 +119,10 @@
 <article>
   <a class="locations__link" href="http://melslearninglab.com" target="_blank">
     <div class="locations__img bg-grey">
-      <!-- <span class="preloader"><span></span></span> -->
-      <div class="absolute-bg" style="background-image: url('https://source.unsplash.com/TD4DBagg2wE/1600x900');"></div>
+      <span class="preloader"><span></span></span>
+      <div class="absolute-bg js-wow fade-in" data-wow-offset="150" style="background-image: url('https://source.unsplash.com/kdcnmw3x5GY/1600x900');"></div>
     </div>
-    <div class="locations__overlay">
+    <div class="locations__overlay js-wow fade-in" data-wow-offset="200">
       <h3 class="locations__title">Starbucks Reserve Roastery</h3>
     </div>
   </a>
@@ -123,10 +130,10 @@
 <article>
   <a class="locations__link" href="http://melslearninglab.com" target="_blank">
     <div class="locations__img bg-grey">
-      <!-- <span class="preloader"><span></span></span> -->
-      <div class="absolute-bg" style="background-image: url('https://source.unsplash.com/TD4DBagg2wE/1600x900');"></div>
+      <span class="preloader"><span></span></span>
+      <div class="absolute-bg js-wow fade-in" data-wow-offset="150" style="background-image: url('https://source.unsplash.com/kdcnmw3x5GY/1600x900');"></div>
     </div>
-    <div class="locations__overlay">
+    <div class="locations__overlay js-wow fade-in" data-wow-offset="200">
       <h3 class="locations__title">The Waterfront</h3>
     </div>
   </a>
@@ -134,10 +141,10 @@
 <article>
   <a class="locations__link" href="http://melslearninglab.com" target="_blank">
     <div class="locations__img bg-grey">
-      <!-- <span class="preloader"><span></span></span> -->
-      <div class="absolute-bg" style="background-image: url('https://source.unsplash.com/TD4DBagg2wE/1600x900');"></div>
+      <span class="preloader"><span></span></span>
+      <div class="absolute-bg js-wow fade-in" data-wow-offset="150" style="background-image: url('https://source.unsplash.com/kdcnmw3x5GY/1600x900');"></div>
     </div>
-    <div class="locations__overlay">
+    <div class="locations__overlay js-wow fade-in" data-wow-offset="200">
       <h3 class="locations__title">The Gum Wall</h3>
     </div>
   </a>
@@ -145,10 +152,10 @@
 <article>
   <a class="locations__link" href="http://melslearninglab.com" target="_blank">
     <div class="locations__img bg-grey">
-      <!-- <span class="preloader"><span></span></span> -->
-      <div class="absolute-bg" style="background-image: url('https://source.unsplash.com/TD4DBagg2wE/1600x900');"></div>
+      <span class="preloader"><span></span></span>
+      <div class="absolute-bg js-wow fade-in" data-wow-offset="150" style="background-image: url('https://source.unsplash.com/kdcnmw3x5GY/1600x900');"></div>
     </div>
-    <div class="locations__overlay">
+    <div class="locations__overlay js-wow fade-in" data-wow-offset="200">
       <h3 class="locations__title">The Space Needle</h3>
     </div>
   </a>
@@ -156,10 +163,10 @@
 <article>
   <a class="locations__link" href="http://melslearninglab.com" target="_blank">
     <div class="locations__img bg-grey">
-      <!-- <span class="preloader"><span></span></span> -->
-      <div class="absolute-bg" style="background-image: url('https://source.unsplash.com/TD4DBagg2wE/1600x900');"></div>
+      <span class="preloader"><span></span></span>
+      <div class="absolute-bg js-wow fade-in" data-wow-offset="150" style="background-image: url('https://source.unsplash.com/kdcnmw3x5GY/1600x900');"></div>
     </div>
-    <div class="locations__overlay">
+    <div class="locations__overlay js-wow fade-in" data-wow-offset="200">
       <h3 class="locations__title">Discovery Park</h3>
     </div>
   </a>
@@ -170,7 +177,7 @@
 </section>
 
 <!-- Contact -->
-<section class="contact section-padding">
+<section id="contact" class="contact section-padding">
   <div class="grid-xlarge">
     <h2>Get in touch</h2>
 

@@ -2,9 +2,22 @@
 // Locations
 //---------------------------------------------- 
 .locations {
+  background-color: $color-lightgrey;
+
+  padding-bottom: 3em;
+
+  @media (min-width: $mq-small) {
+    padding-bottom: 5em;
+  }
+
+  @media (min-width: $mq-xlarge) {
+    padding-bottom: 7em;
+  }
 
   &__container {
     @include flex-grid(1, 2, 3, $pad: 1em);
+
+    margin-top: 1em;
   }
 
   &__link {
@@ -13,17 +26,32 @@
     display: block;
 
     color: $color-white;
+
+    &:hover {
+
+      .locations__img .absolute-bg {
+        transform: scale(1.1);
+      }
+    }
   }
 
   &__img {
     position: relative;
 
     padding-bottom: 100%;
+
+    background-color: $color-white;
+    overflow: hidden;
+
+    .absolute-bg {
+      transition: transform 200ms ease-in-out;
+    }
   }
 
   &__overlay {
     @extend %flex-center;
-    
+    @extend %text-center;
+
     position: absolute;
     top: 0;
     left: 0;
@@ -32,10 +60,10 @@
     height: 100%;
     width: 100%;
 
-    padding: 2em;
+    padding: 2em 4em;
   }
 
   &__title {
-
+    @extend %letter-spacing;
   }
 }
