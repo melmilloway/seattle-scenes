@@ -10,6 +10,13 @@ import Formspree from './components/_formspree.js';
 //----------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
 
+  var header = document.getElementsByClassName('mast__title')[0];
+  var array = header.innerHTML.split(' ');
+  header.innerHTML = '';
+  array.forEach(idx => {
+    header.innerHTML += `<span>${idx}</span><span>&nbsp;</span>`;
+  });
+
   // WOW
   const wow = new WOW({
     boxClass: 'js-wow'

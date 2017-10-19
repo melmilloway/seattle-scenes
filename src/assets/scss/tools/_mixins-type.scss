@@ -24,14 +24,14 @@
     width: 100%;
     
     border: $borderWidth solid $borderColor;
-    transition: transform 0.3s ease-in;
+    transition: transform 300ms ease-in;
   }
   
   &:hover {
     
     &:before,
     &:after {
-      transition: transform 0.3s ease-out;
+      transition: transform 300ms ease-out;
     }
   
     &:before {
@@ -58,18 +58,20 @@
     content: "";
     position: absolute;
     left: 50%;
-    bottom: -0.1em;
+    bottom: 0;
 
     height: 2px;
     width: 0;
 
     background-color: $color;
-    transition: all 0.3s ease-in-out;
+    transition: all 200ms ease-in-out;
   }
 
-  /*
-   * Add hover to pseudo element
-   * left: 0;
-   * width: 100%
-   */
+  &:hover {
+
+    &:after {
+      left: 0;
+      width: 100%;
+    }
+  }
 }

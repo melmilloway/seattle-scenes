@@ -3,6 +3,18 @@
 //---------------------------------------------- 
 .mast {
 
+  &__title {
+    overflow: hidden;
+
+    span {
+      @include nth-animation-delay($time: 75ms);
+
+      display: inline-block;
+
+      animation: span-title 750ms ease-in-out both;
+    }
+  }
+
   &__sep {
     height: 1px;
     width: 100%;
@@ -15,11 +27,13 @@
 
     border: 0;
     background-color: rgba($color-black, 0.1);
+    animation: width 750ms ease-in-out both 1s;
   }
 
   &__text {
     max-width: $mq-small;
     
     font-size: 1.2em;
+    animation: fade-in-up ease-in-out 750ms both 1.25s;
   }
 }
