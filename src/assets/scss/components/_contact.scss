@@ -1,0 +1,65 @@
+//----------------------------------------------
+// Contact
+//---------------------------------------------- 
+.contact {
+  padding: 4em 1em 2em;
+
+  @media (min-width: $mq-small) {
+    padding: 6em 2em 4em;
+  }
+
+  @media (min-width: $mq-med) {
+    padding: {
+      right: 1em;
+      left: 1em;
+    }
+  }
+
+  @media (min-width: $mq-xlarge) {
+    padding: {
+      top: 8em;
+      bottom: 6em;
+    }
+  }
+
+  &__form {
+    margin-top: 2em;
+  }
+
+  &__subcontainer {
+    display: flex;
+    justify-content: space-between;
+
+    & > * {
+      flex-basis: 47.5%;
+      max-width: 47.5%;
+    }
+  }
+
+  &__submit {
+    text-align: right;
+  }
+
+  &__btn {
+    @include btn-split($color-black);
+
+    display: inline-block;
+  }
+
+  &__message-container {
+    text-align: right;
+  }
+
+  &__message {
+    display: inline-block;
+    margin: {
+      top: 1em;
+      bottom: 0;
+    }
+    padding: 1em 2em;
+
+    background-color: $color-lightgrey;
+    border-left: 3px solid $color-black;
+    opacity: 0;
+  }
+}

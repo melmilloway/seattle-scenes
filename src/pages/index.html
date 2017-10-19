@@ -1,0 +1,119 @@
+@@include("./partials/_head.html", {
+  "title": "Scenes Around Seattle",
+  "description": "Scenes around Seattle."
+})
+
+@@include('./partials/_header.html')
+
+<!-- Main -->
+<main role="main">
+
+<!-- Mast -->
+<section class="mast section-padding">
+  <div class="grid-large">
+    <h1 class="mast__title">Visit Seattle from your couch.</h1>
+    <hr class="mast__sep"/>
+    <p class="mast__text">Experience Seattle in 360°. Grab a pair of virtual reality goggles to be immersed in the great Pacific Northwest or choose to browse locations on your desktop/mobile device.</p>
+  </div>
+</section>
+
+<!-- Sep -->
+<section class="section-padding--none">
+  <div class="grid-xlarge">
+    <hr class="sep"/>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about" class="about section-padding">
+  <div class="grid-large">
+    <h2>About the project</h2>
+    <div class="about__text">
+      <p>Scenes Around Seattle is a project for the xAPI 2017 Fall Cohort. The project uses the A-Frame virtual reality framework to build 360° scenes around Seattle. All 360° images were taken in Seattle using a 360° Ricoh Theta camera. Users are able to choose a specific location in Seattle to visit. Each location has markers with facts about that location.</p>
+      <p>In the project, xAPI tracks the locations that users visit, as well as the facts that they gather about that location. The project uses a form to help connect to our data with basic authentication. A user can choose to skip filling out the form. A random email address will be generated to authenticate the user, if the user chooses to skip filling out the form. All data is stored in the Yet xAPI Learning Record Store (LRS).</p>
+    </div>
+  </div>
+</section>
+
+<!-- Locations -->
+<section id="travel" class="locations section-padding">
+  <div class="grid-large">
+    <h2>I want to visit...</h2>
+    <div class="locations__container">
+      @@loop('./partials/_location.html', [
+        {
+          "link": "http://melslearninglab.com",
+          "image": "assets/images/pike-place.jpg",
+          "title": "Pike Place Market"
+        },  
+        {
+          "link": "http://melslearninglab.com",
+          "image": "assets/images/coffee.jpg",
+          "title": "Starbucks Reserve Roastery"
+        },
+        {
+          "link": "http://melslearninglab.com",
+          "image": "assets/images/water-front.jpg",
+          "title": "The Waterfront"
+        },
+        {
+          "link": "http://melslearninglab.com",
+          "image": "assets/images/gum-wall.jpg",
+          "title": "The Gum Wall"
+        },
+        {
+          "link": "http://melslearninglab.com",
+          "image": "assets/images/space-needle.jpg",
+          "title": "The Space Needle"
+        },
+        {
+          "link": "http://melslearninglab.com",
+          "image": "assets/images/discovery-park.jpg",
+          "title": "Discovery Park"
+        }
+      ])
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+  <div class="grid-large">
+    <h2>Get in touch</h2>
+
+    <form id="form" class="contact__form" action="https://formspree.io/mmilloway87@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Email from Scenes Around Seattle. 🦀">
+      <div class="contact__subcontainer">
+        <div>
+          <label for="form-name">Name</label>
+          <input type="text" name="name" id="form-name" placeholder="Bob Ross" required>
+        </div>
+        <div>
+          <label for="form-email">E-mail</label>
+          <input type="email" name="email" id="form-email" placeholder="TinyLittleTrees@gmail.com" required>
+        </div>
+      </div>
+
+      <div>
+        <label for="form-message">Message</label>
+        <textarea name="message" id="form-message" rows="3"></textarea>
+      </div>
+
+      <div class="contact__submit">
+        <div class="contact__btn">
+          <input type="submit" value="Send">
+        </div>
+      </div>
+
+      <div class="contact__message-container">
+        <p class="contact__message">Message Sent</p>
+      </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- Footer -->  
+@@include('./partials/_footer.html')
