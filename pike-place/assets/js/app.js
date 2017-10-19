@@ -52,7 +52,7 @@ $(document).ready(function() {
       factCount++;
       $('#facts').html(factCount);
 
-     // xapistatement('viewed','http://virtual-reality-seattle.com/pike-place/1','fact 1','in Pike Place Market');
+     xapistatement('viewed','http://virtual-reality-seattle.com/pike-place/1','fact 1','in Pike Place Market');
 
       tipOneVisited = true;
     }
@@ -66,7 +66,7 @@ $(document).ready(function() {
       factCount++;
       $('#facts').html(factCount);
 
-      //xapistatement('viewed','http://virtual-reality-seattle.com/pike-place/2','fact 2','in Pike Place Market');
+      xapistatement('viewed','http://virtual-reality-seattle.com/pike-place/2','fact 2','in Pike Place Market');
 
       tipTwoVisited = true;
     }
@@ -78,9 +78,9 @@ $(document).ready(function() {
 
     if (!tipThreeVisited) {
       factCount++;
-      $('facts').html(factCount);
+      $('#facts').html(factCount);
 
-      //xapistatement('viewed','http://virtual-reality-seattle.com/pike-place/3','fact 3','in Pike Place Market');
+      xapistatement('viewed','http://virtual-reality-seattle.com/pike-place/3','fact 3','in Pike Place Market');
 
       tipThreeVisited = true;
     }
