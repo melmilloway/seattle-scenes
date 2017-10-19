@@ -1,0 +1,154 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/*
+ * Preloader
+ */
+.preloader {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+
+.preloader__spinner {
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+  border: 0.25rem solid rgba(255, 255, 255, 0.2);
+  border-top-color: #348aa7;
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/*
+ * Popup
+ */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.popup__container {
+  max-width: 20em;
+  padding: 2em 4em;
+
+  text-align: center;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.popup__text {
+  margin-top: 0;
+  margin-bottom: 0.75em;
+
+  font-size: 1.25em;
+}
+
+.popup__input {
+  display: block;;
+  width: 100%;
+  padding: 0.5em 0.25em;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  color: #000;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 0;
+  box-shadow: none;
+  outline: 0;
+  -webkit-appearance: none;
+  transition: border-color 200ms ease-in-out;
+}
+
+.popup__input:hover,
+.popup__input:active {
+  border-color: #000;
+}
+
+::placeholder {
+  color: #bbb;
+}
+
+.popup__subcontainer {
+  margin-top: 2em;
+}
+
+.popup__skip,
+.popup__submit {
+  display: inline-block;
+  padding: 0.5em 1em;
+
+  cursor: pointer;
+  transition: all 400ms ease-in-out;
+}
+
+.popup__skip {
+  margin-right: 0.5em;
+
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+.popup__skip:hover,
+.popup__skip:active,
+.popup__skip:focus {
+  color: #fff;
+  background-color: #000;
+}
+
+.popup__submit {
+  margin-left: 0.5em;
+
+  color: #fff;
+  border: 1px solid #000;
+  background-color: #000;
+}
+
+.popup__submit:hover,
+.popup__submit:active,
+.popup__submit:focus {
+  color: #000;
+  background-color: #fff;
+}
+
+/*
+ * Fact Text
+ */
+.fact-text {
+  position: relative;
+  z-index: 99;
+
+  padding: 0.1% 2% 0.1% 0.1%;
+
+  /*font-family: "Roboto", sans-serif;*/
+  font-size: 1rem;
+  text-align: right;
+  background: rgba(255,255,255,0.8);
+}
