@@ -79,7 +79,7 @@ $(document).ready(function() {
 
     if (!tipThreeVisited) {
       factCount++;
-      $('facts').html(factCount);
+      $('#facts').html(factCount);
 
      xapistatement('viewed','http://virtual-reality-seattle.com/starbucks-roastery/3','fact 3','in Starbucks Roastery');
 
@@ -93,7 +93,7 @@ $(document).ready(function() {
 
     if (!tipFourVisited) {
       factCount++;
-      $('facts').html(factCount);
+      $('#facts').html(factCount);
 
      xapistatement('viewed','http://virtual-reality-seattle.com/starbucks-roastery/4','fact 4','in Starbucks Roastery');
 
