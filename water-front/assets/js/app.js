@@ -8,7 +8,7 @@ $(document).ready(function() {
 
   $('.popup__skip').on('click', function() {
     email = generateEmail();
-    xapistatement('experienced','http://virtual-reality-seattle.com/pike-place/landing','what it is like','in Pike Place');
+    xapistatement('experienced','http://virtual-reality-seattle.com/water-front/landing','what it is like','in Waterfront');
   });
 
   $('.popup__submit').on('click', function() {
@@ -16,7 +16,7 @@ $(document).ready(function() {
     var input = $('.popup__input').val();
 
     email = regex.test(input) ? input : generateEmail();
-    xapistatement('experienced','http://virtual-reality-seattle.com/pike-place/landing','what it is like','in Pike Place');
+    xapistatement('experienced','http://virtual-reality-seattle.com/water-front/landing','what it is like','in Waterfront');
   });
 
   function generateEmail() {
@@ -54,7 +54,7 @@ $(document).ready(function() {
       factCount++;
       $('#facts').html(factCount);
 
-     xapistatement('viewed','http://virtual-reality-seattle.com/pike-place/1','fact 1','in Pike Place Market');
+     xapistatement('viewed','http://virtual-reality-seattle.com/water-front/1','fact 1','in Waterfront');
 
       tipOneVisited = true;
     }
@@ -68,7 +68,7 @@ $(document).ready(function() {
       factCount++;
       $('#facts').html(factCount);
 
-      xapistatement('viewed','http://virtual-reality-seattle.com/pike-place/2','fact 2','in Pike Place Market');
+      xapistatement('viewed','http://virtual-reality-seattle.com/water-front/2','fact 2','in Waterfront');
 
       tipTwoVisited = true;
     }
@@ -82,7 +82,7 @@ $(document).ready(function() {
       factCount++;
       $('#facts').html(factCount);
 
-      xapistatement('viewed','http://virtual-reality-seattle.com/pike-place/3','fact 3','in Pike Place Market');
+      xapistatement('viewed','http://virtual-reality-seattle.com/water-front/3','fact 3','in Waterfront');
 
       tipThreeVisited = true;
     }
@@ -104,7 +104,7 @@ $(document).ready(function() {
         }
       }
     };
-    
+      
     stmt.verb=ADL.verbs[verb];
 
     stmt.actor = {'mbox': 'mailto:' + email}; 

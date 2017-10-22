@@ -10,7 +10,7 @@ function generateEmail() {
 // xAPI Launcher
 function launchXAPICourse() {
   console.log('Something');
-  var auth = 'Basic YWU0MjU0ZjJjZWNkMDljYmQ0NGQyOTc3NTYzZDVlYTUyZGU0YjY0OTJkODk1ZGRlOmFlNmRmOTI2ODNmNmI2MzBjNzRiY2U2YWRmOWNlYWMzZTE2MzMzODBjYjc0NmRjYTllM2EzNmJkMmRkMmI5NTY=';
+  var auth = 'Basic OTVkNWI4ZjNmNjhkYzQ5NjM3MmNjYjNhNTYzNGQxYjkxMDY2MzkwYmE5YmViOWU5OjFlODQzZjRjNWU5N2VjOWNiYjNlNjI5ZTlkMDk3NzUzZTY4NDQxYjQ4NTU5YTEwMzNmYjFiNjdiZTVjYmY1MGM=';
   var launchUrl = './seattle-vr.html'; // Location of the file.
 
   launchUrl += '?endpoint=https://trial-lrs.yetanalytics.io/xapi';

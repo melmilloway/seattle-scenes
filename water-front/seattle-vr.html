@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>The Waterfront</title>
+
+  <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <link rel="stylesheet" href="assets/css/app.css">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+  <script src="assets/js/aframe-animation-component.min.js"></script>
+  <script src="assets/js/app.js"></script>
+</head>
+<body>
+  <!-- Preloader -->
+  <div id="preloader">
+    <div class="preloader__spinner"></div>
+  </div>
+
+  <!-- Popup -->
+  <div class="popup">
+    <div class="popup__container">
+      <p class="popup__text">Enter your email address or skip.</p>
+      <input class="popup__input" type="email" name="email" placeholder="Email address" required>
+
+      <div class="popup__subcontainer">
+        <span class="popup__skip">Skip</span> <span>or</span> <span class="popup__submit">Submit</span>
+      </div>
+    </div>
+  </div>
+
+  <a-scene>
+    <!--Text not working on VR headset -->
+    <div class="fact-text">
+      <p>You've learned <span id="facts"> </span> / 3 facts about The Waterfront.</p>
+    </div>
+  
+    <a-sky src="assets/images/water-front.jpg" rotation="0 -130 0"></a-sky>
+
+    <a-entity id="main-camera-wrapper" position="0.43 4.06 4.92" rotation="0 -2.29 0">
+      <a-camera id="main-camera" visible="true" wasd-controls="enabled: false; easing: 10; acceleration: 75; fly: false;"
+      cursor="rayOrigin: mouse;" raycaster="objects: .clickable">
+        <a-cursor id="fuse-cursor" objects=".clickable" fuse="true" position="0 0 -1" rotation="0 0 0"
+        scale="1 1 1" geometry="radiusInner: 0.02; radiusOuter: 0.03; thetaLength: 360; thetaStart: 90;"
+        color="#ffffff" opacity="1" shader="flat" repeat="1 1" visible="true"></a-cursor>
+
+        <a-ring id="fuse-progress" position="0 0 -0.999" rotation="0 0 0" scale="1 1 1"
+        radius-inner="0.02" radius-outer="0.03" theta-length="360" theta-start="90" color="#348aa7"
+        opacity="0" shader="flat" repeat="1 1" visible="true" class="clickable" animation="startEvents: fusing; property: geometry.thetaLength; to: 0; dur: 1500; easing: linear; delay: 0; dir: normal; loop: 0; from: 360;"
+        animation__1="startEvents: fusing; property: opacity; to: 1; dur: 500; easing: linear; delay: 0; dir: normal; loop: 0; from: 0;"></a-ring>
+      </a-camera>
+    </a-entity>
+
+    <!-- Sphere 1 -->
+    <a-sphere id="tip-1" position="1.8 8.2 -2.5" rotation="0 0 0"
+    scale="1 1 1" radius="1"  color="#FFFFFF" opacity="0" shader="flat" side="double" repeat="1 1" visible="true" class="clickable" animation="property: scale; to: 0.35 0.35 0.35; dur: 2000; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: true; ">
+      <a-image src="assets/images/view.png" z-index="9999;"></a-image>
+    </a-sphere>
+
+    <a-text id="tip-1-text" position="4 8.276 -2.22" rotation="0 -20 0"
+    scale="0.75 0.75 0.75" value="The Seattle Great Wheel is the tallest wheel on the West Coast, it has 42 gondolas, and puts on a light show on special occasions."
+    font="https://cdn.aframe.io/fonts/Roboto-msdf.json" align="left" opacity="0" color="#000000" wrap-count="26.38"
+    letter-spacing="0" line-height="80.00" width="2.52" height="0" side="double" anchor="center"
+    visible="true" animation="startEvents: trigger-clicked; property: text.opacity; to: 1; dur: 1000; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "
+    animation__1="startEvents: trigger-clicked; property: scale; to: 1 1 1; dur: 1000; easing: easeOutElastic; elasticity: 400; delay: 0; dir: normal; loop: 0; "></a-text>
+
+    <a-plane id="tip-1-background" position="4.3 8.498 -2.927" rotation="0 -20 0"
+    scale="0.75 0.75 0.75" width="3.00" height="1.5" color="#FFFFFF" opacity="0" shader="flat"
+    side="double" metalness="0.5" roughness="1" repeat="1 1" visible="true" animation="startEvents: trigger-clicked; property: material.opacity; to: 1; dur: 1000; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "
+    animation__1="startEvents: trigger-clicked; property: scale; to: 1 1 1; dur: 1000; easing: easeOutElastic; elasticity: 400; delay: 0; dir: normal; loop: 0; "></a-plane>
+
+    <!-- Sphere 2 -->
+    <a-sphere id="tip-2" position="15 7 2" rotation="0 -60 0"
+    scale="1 1 1" radius="1"  color="#FFFFFF" opacity="0" shader="flat" side="double" repeat="1 1" visible="true" class="clickable" animation="property: scale; to: 0.35 0.35 0.35; dur: 2000; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: true; ">
+      <a-image src="assets/images/view.png" z-index="9999;"></a-image>
+    </a-sphere>
+
+    <a-text id="tip-2-text" position="15.8 7 -2.5" rotation="0 -45 0"
+    scale="0.75 0.75 0.75" value="The Waterfront is home to Seattle's aquarium, boat tours, and more. The aquarium is chock full of sea creatures from the Pacific Northwest."
+    font="https://cdn.aframe.io/fonts/Roboto-msdf.json" align="left" opacity="0" color="#000000" wrap-count="26.38"
+    letter-spacing="0" line-height="80.00" width="5.52" height="0" side="double" anchor="center"
+    visible="true" animation="startEvents: trigger-clicked; property: text.opacity; to: 1; dur: 1000; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "
+    animation__1="startEvents: trigger-clicked; property: scale; to: 1 1 1; dur: 1000; easing: easeOutElastic; elasticity: 400; delay: 0; dir: normal; loop: 0; "></a-text>
+
+    <a-plane id="tip-2-background" position="18 7 -3.7" rotation="0 -45 0"
+    scale="0.75 0.75 0.75" width="7.50" height="5.12" color="#FFFFFF" opacity="0" shader="flat"
+    side="double" metalness="0.5" roughness="1" repeat="1 1" visible="true" animation="startEvents: trigger-clicked; property: material.opacity; to: 1; dur: 1000; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "
+    animation__1="startEvents: trigger-clicked; property: scale; to: 1 1 1; dur: 1000; easing: easeOutElastic; elasticity: 400; delay: 0; dir: normal; loop: 0; "></a-plane>
+
+<!-- Sphere 3 -->
+    <a-sphere id="tip-3" position="-1.8 6.5 -2.5" rotation="0 0 0"
+    scale="1 1 1" radius="1"  color="#FFFFFF" opacity="0" shader="flat" side="double" repeat="1 1" visible="true" class="clickable" animation="property: scale; to: 0.35 0.35 0.35; dur: 2000; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: true; ">
+      <a-image src="assets/images/view.png" z-index="9999;"></a-image>
+    </a-sphere>
+
+    <a-text id="tip-3-text" position="-3.9 6.4 -2.3" rotation="0 20 0"
+    scale="0.75 0.75 0.75" value="Check out The Crab Pot or Anthonys for some fresh Seattle seafood, like Dungeness crab and salmon."
+    font="https://cdn.aframe.io/fonts/Roboto-msdf.json" align="left" opacity="0" color="#000000" wrap-count="26.38"
+    letter-spacing="0" line-height="80.00" width="2.52" height="0" side="double" anchor="center"
+    visible="true" animation="startEvents: trigger-clicked; property: text.opacity; to: 1; dur: 1000; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "
+    animation__1="startEvents: trigger-clicked; property: scale; to: 1 1 1; dur: 1000; easing: easeOutElastic; elasticity: 400; delay: 0; dir: normal; loop: 0; "></a-text>
+
+    <a-plane id="tip-3-background" position="-4.2 6.5 -2.927" rotation="0 40 0"
+    scale="0.75 0.75 0.75" width="3.00" height="1.5" color="#FFFFFF" opacity="0" shader="flat"
+    side="double" metalness="0.5" roughness="1" repeat="1 1" visible="true" animation="startEvents: trigger-clicked; property: material.opacity; to: 1; dur: 1000; easing: linear; elasticity: 400; delay: 0; dir: normal; loop: 0; "
+    animation__1="startEvents: trigger-clicked; property: scale; to: 1 1 1; dur: 1000; easing: easeOutElastic; elasticity: 400; delay: 0; dir: normal; loop: 0; "></a-plane>
+
+    
+  </a-scene>
+</body>
+</html>
