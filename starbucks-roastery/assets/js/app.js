@@ -8,6 +8,7 @@ $(document).ready(function() {
 
   $('.popup__skip').on('click', function() {
     email = generateEmail();
+    xapistatement('experienced','http://virtual-reality-seattle.com/starbucks-roastery/landing','what it is like','in Starbucks Roastery');
   });
 
   $('.popup__submit').on('click', function() {
@@ -15,6 +16,7 @@ $(document).ready(function() {
     var input = $('.popup__input').val();
 
     email = regex.test(input) ? input : generateEmail();
+    xapistatement('experienced','http://virtual-reality-seattle.com/starbucks-roastery/landing','what it is like','in Starbucks Roastery');
   });
 
   function generateEmail() {
@@ -117,12 +119,6 @@ $(document).ready(function() {
         }
       }
     };
-
-    // var actor = getQueryVariable("actor");
-    // actor = decodeURI(actor);
-    // newEmail = actor.split(':');
-    // shortEmail = newEmail[2].split('"');
-    // newActor = shortEmail[0];
       
     stmt.verb=ADL.verbs[verb];
 
@@ -132,7 +128,7 @@ $(document).ready(function() {
     request.open('PUT', "https://trial-lrs.yetanalytics.io/xapi/statements?statementId="+randomString);
     request.setRequestHeader('Content-Type', 'application/json');
     request.setRequestHeader('X-Experience-API-Version','1.0.0');
-    request.setRequestHeader('Authorization',"Basic YWU0MjU0ZjJjZWNkMDljYmQ0NGQyOTc3NTYzZDVlYTUyZGU0YjY0OTJkODk1ZGRlOmFlNmRmOTI2ODNmNmI2MzBjNzRiY2U2YWRmOWNlYWMzZTE2MzMzODBjYjc0NmRjYTllM2EzNmJkMmRkMmI5NTY=");
+    request.setRequestHeader('Authorization',"Basic OTVkNWI4ZjNmNjhkYzQ5NjM3MmNjYjNhNTYzNGQxYjkxMDY2MzkwYmE5YmViOWU5OjFlODQzZjRjNWU5N2VjOWNiYjNlNjI5ZTlkMDk3NzUzZTY4NDQxYjQ4NTU5YTEwMzNmYjFiNjdiZTVjYmY1MGM=");
     var body = stmt;
     request.send(JSON.stringify(body));     
   }
